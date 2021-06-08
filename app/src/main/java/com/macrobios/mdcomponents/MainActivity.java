@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.macrobios.mdcomponents.adapters.ComponentAdapter;
 import com.macrobios.mdcomponents.databinding.ActivityMainBinding;
+import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
 import com.macrobios.mdcomponents.fragments.ButtonFragment;
 import com.macrobios.mdcomponents.utils.Commons;
 
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private void configAdapter() {
         adapter = new ComponentAdapter(new ArrayList<>());
         adapter.add(ButtonFragment.getInstance());
+        adapter.add(BottomNavigationBarFragment.getInstance());
     }
 
 

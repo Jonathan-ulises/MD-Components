@@ -2,6 +2,7 @@ package com.macrobios.mdcomponents;
 
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ import com.macrobios.mdcomponents.utils.Commons;
 
 public class StaticActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
+
     private ActivityStatic2Binding binding;
 
     @Override
@@ -39,6 +40,15 @@ public class StaticActivity extends AppCompatActivity {
 
             Commons.setFragment(this, nameFragment, R.id.content_static);
         }
+
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){

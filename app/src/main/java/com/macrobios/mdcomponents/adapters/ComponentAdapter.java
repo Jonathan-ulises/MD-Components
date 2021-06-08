@@ -63,7 +63,7 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
         }
 
         public void bind (Component component){
-            binding.txtName.setText(component.getName());
+             binding.txtName.setText(component.getName());
             binding.imgFoto.setImageResource(component.getFotoRes());
             binding.getRoot().setOnClickListener(v -> {
                 mListener.onItemClick(component);
