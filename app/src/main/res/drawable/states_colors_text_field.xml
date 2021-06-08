@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_active="true"
+        android:color="@color/secundaryVariant_color"/>
+
+    <item
+        android:state_focused="true"
+        android:color="@color/primaryVariant_color"/>
+</selector>
