@@ -7,6 +7,7 @@ import com.macrobios.mdcomponents.fragments.ButtonFragment;
 import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
 import com.macrobios.mdcomponents.fragments.SnackBarFragment;
 import com.macrobios.mdcomponents.fragments.TextFieldFragment;
+import com.macrobios.mdcomponents.fragments.FloatingActionButtonFragment;
 
 public class Commons {
     //Paso de parametros en la MainActivity y Scroll/static Activity
@@ -42,6 +43,9 @@ public class Commons {
                 break;
             case SnackBarFragment.TAG:
                 fragment = new SnackBarFragment();
+                break;
+            case FloatingActionButtonFragment.TAG:
+                fragment = new FloatingActionButtonFragment();
                 break;
         }
 

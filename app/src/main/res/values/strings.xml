@@ -45,7 +45,7 @@
     <string name="status_filled_dense">Filled Dense</string>
     <string name="status_icon_enabled">Icon</string>
     <string name="status_icon_text_enabled">Icon Text</string>
-    <string name="status_legacy_style">Legacy Material Style</string>
+    <string name="status_legacy_style">Legacy Material Style (AccentColor)</string>
     <string name="status_outlined_dense_enabled">Outlined Dense</string>
     <string name="status_outlined_enabled">Outlined</string>
     <string name="status_text_enabled">Text</string>

@@ -11,7 +11,6 @@
         <item name="colorOnSecondary">@color/on_secundary_color</item>
 
         <item name="android:colorBackground">@color/bacground_color</item>
-        <item name="android:colorBackground">@color/bacground_color</item>
         <item name="colorSurface">@color/surface_color</item>
         <item name="colorError">@color/error_color</item>
 
@@ -19,7 +18,7 @@
         <item name="colorOnBackground">@color/on_background_color</item>
         <item name="colorOnSurface">@color/on_surface_color</item>
 
-
+        <item name="colorAccent">@color/acent_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

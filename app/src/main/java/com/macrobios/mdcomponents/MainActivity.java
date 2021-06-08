@@ -9,6 +9,7 @@ import com.macrobios.mdcomponents.adapters.ComponentAdapter;
 import com.macrobios.mdcomponents.databinding.ActivityMainBinding;
 import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
 import com.macrobios.mdcomponents.fragments.ButtonFragment;
+import com.macrobios.mdcomponents.fragments.FloatingActionButtonFragment;
 import com.macrobios.mdcomponents.fragments.SnackBarFragment;
 import com.macrobios.mdcomponents.fragments.TextFieldFragment;
 import com.macrobios.mdcomponents.utils.Commons;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.add(BottomNavigationBarFragment.getInstance());
         adapter.add(SnackBarFragment.getInstance());
         adapter.add(TextFieldFragment.getInstance());
+        adapter.add(FloatingActionButtonFragment.getInstance());
     }
 
 
