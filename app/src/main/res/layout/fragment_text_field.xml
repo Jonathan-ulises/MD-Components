@@ -110,7 +110,9 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
+        <!--ICON Y EVENTO PERSONALIDADO-->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_CapitalLetter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_padding_default"
@@ -119,9 +121,14 @@
             app:boxCornerRadiusTopEnd="@dimen/circle_radios"
             app:boxCornerRadiusBottomStart="@dimen/circle_radios"
             app:boxCornerRadiusBottomEnd="@dimen/circle_radios"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_format_size"
+            app:endIconTint="@color/primary_color"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCapitalLetter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
