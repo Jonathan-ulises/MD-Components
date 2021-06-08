@@ -76,5 +76,4 @@
         app:layout_constraintBottom_toBottomOf="@id/cbDisableSelected" />
 
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
