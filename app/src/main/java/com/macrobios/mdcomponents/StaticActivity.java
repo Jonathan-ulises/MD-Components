@@ -41,14 +41,7 @@ public class StaticActivity extends AppCompatActivity {
             Commons.setFragment(this, nameFragment, R.id.content_static);
         }
 
-        FloatingActionButton fab = binding.fab;
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){

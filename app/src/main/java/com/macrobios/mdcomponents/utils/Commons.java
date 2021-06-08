@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 
 import com.macrobios.mdcomponents.fragments.ButtonFragment;
 import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
+import com.macrobios.mdcomponents.fragments.SnackBarFragment;
 
 public class Commons {
     //Paso de parametros en la MainActivity y Scroll/static Activity
@@ -34,6 +35,9 @@ public class Commons {
             //STATIC
             case BottomNavigationBarFragment.TAG:
                 fragment = new BottomNavigationBarFragment();
+                break;
+            case SnackBarFragment.TAG:
+                fragment = new SnackBarFragment();
                 break;
         }
 
