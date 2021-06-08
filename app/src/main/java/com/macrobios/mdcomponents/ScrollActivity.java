@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -28,10 +29,10 @@ public class ScrollActivity extends AppCompatActivity {
         binding = ActivityScrollBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
-        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
+        //Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(binding.toolbar);
+        //CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
+
 
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,7 @@ public class ScrollActivity extends AppCompatActivity {
         String nameFragment = null;
         if(savedInstanceState == null) {
             nameFragment  = getIntent().getStringExtra(Commons.ARG_NAME);
+            Log.i(Commons.ARG_NAME, nameFragment);
 
             Commons.setFragment(this, nameFragment, R.id.content_scroll);
         }

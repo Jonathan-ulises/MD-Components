@@ -32,7 +32,7 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
 
     @NonNull
     @Override
-    public ComponentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ComponentAdapter.ComponentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemComponentBinding binding = ItemComponentBinding.inflate(LayoutInflater.from(parent.getContext()));
         return new ComponentViewHolder(binding);
     }
@@ -59,6 +59,7 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
         private ItemComponentBinding binding;
         public ComponentViewHolder(@NonNull ItemComponentBinding binding) {
             super(binding.getRoot());
+            this.binding = binding;
         }
 
         public void bind (Component component){

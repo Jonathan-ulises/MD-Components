@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MDComponents">
         <activity
-            android:name=".StaticActivity2"
+            android:name=".StaticActivity"
             android:label="@string/title_activity_static2"
             android:theme="@style/Theme.MDComponents.NoActionBar"></activity>
         <activity

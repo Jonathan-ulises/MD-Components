@@ -19,7 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.macrobios.mdcomponents.databinding.ActivityStatic2Binding;
 import com.macrobios.mdcomponents.utils.Commons;
 
-public class StaticActivity2 extends AppCompatActivity {
+public class StaticActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityStatic2Binding binding;

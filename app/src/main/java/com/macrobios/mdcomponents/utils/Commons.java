@@ -3,6 +3,8 @@ package com.macrobios.mdcomponents.utils;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.macrobios.mdcomponents.fragments.ButtonFragment;
+
 public class Commons {
     //Paso de parametros en la MainActivity y Scroll/static Activity
     public static final String ARG_NAME = "name";
@@ -13,7 +15,10 @@ public class Commons {
 
     public static void setFragment(AppCompatActivity activity, String nameFragment, int contentRest) {
         Fragment fragment = getFragmentById(nameFragment);
-        activity.getSupportFragmentManager().beginTransaction().add(contentRest, fragment).commit();
+        activity.getSupportFragmentManager()
+                .beginTransaction()
+                .add(contentRest, fragment)
+                .commit();
     }
 
     private static Fragment getFragmentById(String nameFragment) {
@@ -21,6 +26,9 @@ public class Commons {
 
         switch (nameFragment) {
             //SCROLL
+            case ButtonFragment.TAG:
+                fragment = new ButtonFragment();
+                break;
 
             //STATIC
         }

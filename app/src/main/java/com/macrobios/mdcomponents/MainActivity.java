@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.macrobios.mdcomponents.adapters.ComponentAdapter;
 import com.macrobios.mdcomponents.databinding.ActivityMainBinding;
+import com.macrobios.mdcomponents.fragments.ButtonFragment;
 import com.macrobios.mdcomponents.utils.Commons;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             if (component.getType() == Commons.SCROLL){
                 intent = new Intent(this, ScrollActivity.class);
             } else {
-                intent = new Intent(this, StaticActivity2.class);
+                intent = new Intent(this, StaticActivity.class);
             }
 
             intent.putExtra(Commons.ARG_NAME, component.getName());
@@ -40,11 +41,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configRecycleView() {
-        adapter = new ComponentAdapter(new ArrayList<>());
+        binding.rclRecycle.setAdapter(adapter);
     }
 
     private void configAdapter() {
-        binding.rclRecycle.setAdapter(adapter);
+        adapter = new ComponentAdapter(new ArrayList<>());
+        adapter.add(ButtonFragment.getInstance());
     }
 
 
