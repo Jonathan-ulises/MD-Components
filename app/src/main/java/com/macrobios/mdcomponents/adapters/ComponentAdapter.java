@@ -1,13 +1,19 @@
 package com.macrobios.mdcomponents.adapters;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.ItemComponentBinding;
 import com.macrobios.mdcomponents.utils.Component;
 
@@ -33,8 +39,10 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
     @NonNull
     @Override
     public ComponentAdapter.ComponentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemComponentBinding binding = ItemComponentBinding.inflate(LayoutInflater.from(parent.getContext()));
-        return new ComponentViewHolder(binding);
+        //ItemComponentBinding binding = ItemComponentBinding.inflate(LayoutInflater.from(parent.getContext()));
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_component, parent, false);
+        return new ComponentViewHolder(view);
     }
 
     @Override
@@ -57,18 +65,29 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
 
     class ComponentViewHolder extends RecyclerView.ViewHolder {
         private ItemComponentBinding binding;
-        public ComponentViewHolder(@NonNull ItemComponentBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
+        private View mView;
+        public ComponentViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.mView = itemView;
+            //this.binding = binding;
         }
 
         public void bind (Component component){
-             binding.txtName.setText(component.getName());
+            Log.d("MC", component.getName() + " " + component.getType());
+            TextView txt = mView.findViewById(R.id.txtName);
+            ImageView img = mView.findViewById(R.id.imgFoto);
+
+            txt.setText(component.getName());
+            img.setImageResource(component.getFotoRes());
+            mView.setOnClickListener(v -> {
+                mListener.onItemClick(component);
+            });
+            /*binding.txtName.setText(component.getName());
             binding.imgFoto.setImageResource(component.getFotoRes());
             binding.getRoot().setOnClickListener(v -> {
                 mListener.onItemClick(component);
             });
-            binding.executePendingBindings();
+            binding.executePendingBindings();*/
         }
     }
 }

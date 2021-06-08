@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <data>
-
-    </data>
-
-    <com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mtrl_card_spacing"
         android:layout_marginStart="@dimen/mtrl_card_spacing"
         android:layout_marginEnd="@dimen/mtrl_card_spacing">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgFoto"
-            tools:src="@drawable/ic_launcher_background"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/item_image_height" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtName"
-            tools:text="name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFoto"
+                tools:src="@drawable/ic_launcher_background"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_image_height"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtName"
+                tools:text="name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_min"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@android:color/black"
+                android:background="@drawable/background_item"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
-</layout>

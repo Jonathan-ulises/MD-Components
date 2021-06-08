@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Por cada navigation o menu vizual en tu app, debes de crear un recurso con
+items de tu menu, donde puedes especificar todos los elementos del menu, ademas
+del icono y titulo de estos elementos (item)-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_start"
