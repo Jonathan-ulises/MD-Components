@@ -3,11 +3,7 @@ package com.macrobios.mdcomponents.utils;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.macrobios.mdcomponents.fragments.ButtonFragment;
-import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
-import com.macrobios.mdcomponents.fragments.SnackBarFragment;
-import com.macrobios.mdcomponents.fragments.TextFieldFragment;
-import com.macrobios.mdcomponents.fragments.FloatingActionButtonFragment;
+import com.macrobios.mdcomponents.fragments.*;
 
 public class Commons {
     //Paso de parametros en la MainActivity y Scroll/static Activity
@@ -35,6 +31,9 @@ public class Commons {
                 break;
             case TextFieldFragment.TAG:
                 fragment = new TextFieldFragment();
+                break;
+            case CheckBoxFragment.TAG:
+                fragment = new CheckBoxFragment();
                 break;
 
             //STATIC
