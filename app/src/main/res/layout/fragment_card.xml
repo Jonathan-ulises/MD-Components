@@ -108,18 +108,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <!--BOTONES-->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnFirstLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/status_enabled"
-                android:layout_marginStart="@dimen/common_padding_min"
-                android:layout_marginBottom="@dimen/common_padding_min"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                style="@style/Widget.MaterialComponents.Button.TextButton"/>
-
             <!--TITULO-->
             <TextView
                 android:id="@+id/tvTitleLarge"
@@ -189,6 +177,62 @@
                 app:layout_constraintStart_toStartOf="@id/tvTitleLarge"
                 app:layout_constraintEnd_toEndOf="@id/tvTitleLarge"
                 app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+
+            <!--BOTONES-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFirstLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_enabled"
+                android:layout_marginStart="@dimen/common_padding_min"
+                android:layout_marginBottom="@dimen/common_padding_min"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+
+            <!--CHIP-->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_chip_demo"
+                android:layout_marginTop="@dimen/card_padding_container_variant"
+                android:layout_marginBottom="@dimen/card_paddin_container_variant2"
+                app:layout_constraintStart_toStartOf="@id/tvTitleLarge"
+                app:layout_constraintTop_toBottomOf="@id/tvSubtitleLarge"
+                app:layout_constraintBottom_toTopOf="@id/btnFirstLarge"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_chip_demo"
+                android:layout_marginStart="@dimen/common_padding_min"
+                app:layout_constraintTop_toTopOf="@id/chpFirst"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpFirst"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chpThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_chip_demo"
+                android:layout_marginStart="@dimen/common_padding_min"
+                app:layout_constraintTop_toTopOf="@id/chpFirst"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpSecond"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_chip_demo"
+                android:layout_marginStart="@dimen/common_padding_min"
+                app:layout_constraintTop_toTopOf="@id/chpFirst"
+                app:layout_constraintBottom_toBottomOf="@id/chpFirst"
+                app:layout_constraintStart_toEndOf="@id/chpThird"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
