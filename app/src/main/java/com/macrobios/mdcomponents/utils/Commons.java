@@ -55,6 +55,9 @@ public class Commons {
             case AlertDialogFragment.TAG:
                 fragment = new AlertDialogFragment();
                 break;
+            case AppBarFragment.TAG:
+                fragment = new AppBarFragment();
+                break;
         }
 
         return fragment;

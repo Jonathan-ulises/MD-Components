@@ -154,4 +154,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="menu_popup_menu">PopUp Menu</string>
     <string name="menu_hint_autocomplete">AutoComplete</string>
+    <string name="app_bar_bottom">App Bar Bottom</string>
+    <string name="app_bar_Top">App Bar Top</string>
 </resources>
