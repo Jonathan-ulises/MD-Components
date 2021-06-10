@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.macrobios.mdcomponents.adapters.ComponentAdapter;
 import com.macrobios.mdcomponents.databinding.ActivityMainBinding;
+import com.macrobios.mdcomponents.fragments.AlertDialogFragment;
 import com.macrobios.mdcomponents.fragments.BottomNavigationBarFragment;
 import com.macrobios.mdcomponents.fragments.ButtonFragment;
 import com.macrobios.mdcomponents.fragments.CardFragment;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.add(CheckBoxFragment.getInstance());
         adapter.add(CardFragment.getInstance());
         adapter.add(MenuFragment.getInstance());
+        adapter.add(AlertDialogFragment.getInstance());
         adapter.reverse();
     }
 
