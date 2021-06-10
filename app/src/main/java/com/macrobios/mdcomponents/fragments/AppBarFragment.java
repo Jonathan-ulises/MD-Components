@@ -45,7 +45,7 @@ public class AppBarFragment extends Fragment {
         });
 
         binding.btnBottom.setOnClickListener(v -> {
-            FullScreenDialogFragment bottomFragment = new FullScreenDialogFragment();
+            AppBarBottomFragment bottomFragment = new AppBarBottomFragment();
             bottomFragment.show(transaction, FullScreenDialogFragment.TAG);
         });
 

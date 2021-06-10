@@ -11,14 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.macrobios.mdcomponents.R;
-import com.macrobios.mdcomponents.databinding.FragmentAppBarBinding;
+import com.macrobios.mdcomponents.databinding.FragmentAppBarBottomBinding;
 import com.macrobios.mdcomponents.databinding.FragmentAppBarTopBinding;
 
 
-public class AppBarTopFragment extends DialogFragment {
+public class AppBarBottomFragment extends DialogFragment {
 
-    private FragmentAppBarTopBinding binding;
-    public static final String TAG = "AppBarTopFragment";
+    private FragmentAppBarBottomBinding binding;
+    public static final String TAG = "AppBarBottomFragment";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,14 +26,12 @@ public class AppBarTopFragment extends DialogFragment {
         //setStyle(DialogFragment.STYLE_NORMAL, R.style.ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen);
         setStyle(DialogFragment.STYLE_NORMAL, R.style.FullScreenDialog);
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentAppBarTopBinding.inflate(inflater, container, false);
+        binding = FragmentAppBarBottomBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        binding.toolbar.setNavigationOnClickListener(v -> dismiss());
         // Inflate the layout for this fragment
         return view;
     }
