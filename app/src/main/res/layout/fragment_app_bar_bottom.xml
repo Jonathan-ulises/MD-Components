@@ -31,6 +31,30 @@
         app:navigationIcon="@drawable/ic_timeline"
         app:hideOnScroll="true"
         app:menu="@menu/menu_bottom_nav"
+        app:fabAlignmentMode="end"
+        app:fabAnimationMode="slide"
+        app:fabCradleMargin="@dimen/common_padding_default"
+        app:fabCradleRoundedCornerRadius="@dimen/common_padding_middle"
+        app:fabCradleVerticalOffset="@dimen/common_padding_default"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
+
+
+    <!--
+    app:fabAlignmentMode="end"   pocicion en la que coloca el fab (end, center)
+    app:fabAnimationMode="scale"      animacion de de trasnlacion del fab, se necesita codigo en java(ver la respectiva clase de este xml)
+    app:fabCradleMargin="@dimen/common_padding_default"    Separacion entre el fap y el appbar
+    app:fabCradleRoundedCornerRadius="@dimen/common_padding_middle"    Redondes de las esquinas formadas por el corte del fab
+    app:fabCradleVerticalOffset="@dimen/common_padding_default"  Separacion del centro del fab con la parte superior del appbar
+    -->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic__add"
+        app:backgroundTint="@android:color/black"
+        app:tint="@android:color/white"
+        app:layout_anchor="@id/bottomAppBar" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

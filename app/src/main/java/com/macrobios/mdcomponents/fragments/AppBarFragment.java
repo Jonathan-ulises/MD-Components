@@ -37,14 +37,16 @@ public class AppBarFragment extends Fragment {
         View view = binding.getRoot();
 
 
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
-        binding.btnTop.setOnClickListener(v -> {
+
+        binding.btnTop.setOnClickListener(v  -> {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
             AppBarTopFragment topFragment = new AppBarTopFragment();
             topFragment.show(transaction, FullScreenDialogFragment.TAG);
         });
 
         binding.btnBottom.setOnClickListener(v -> {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
             AppBarBottomFragment bottomFragment = new AppBarBottomFragment();
             bottomFragment.show(transaction, FullScreenDialogFragment.TAG);
         });
