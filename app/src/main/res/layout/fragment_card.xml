@@ -204,12 +204,17 @@
                 app:layout_constraintTop_toBottomOf="@id/tvSubtitleLarge"
                 app:layout_constraintBottom_toTopOf="@id/btnFirstLarge"/>
 
+            <!-- app:checkedIconVisible="false"
+                Este establece la visibilidad del icono de checheado en false para
+                que no aparesca.
+            -->
             <com.google.android.material.chip.Chip
                 android:id="@+id/chpSecond"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/card_chip_demo"
                 android:layout_marginStart="@dimen/common_padding_min"
+                android:checkable="true"
                 app:layout_constraintTop_toTopOf="@id/chpFirst"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpFirst"/>
@@ -220,6 +225,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/card_chip_demo"
                 android:layout_marginStart="@dimen/common_padding_min"
+                app:closeIconEnabled="true"
                 app:layout_constraintTop_toTopOf="@id/chpFirst"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpSecond"/>
@@ -229,6 +235,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/card_chip_demo"
                 android:layout_marginStart="@dimen/common_padding_min"
+                android:checkable="true"
+                app:closeIconEnabled="true"
+                app:checkedIcon="@drawable/ic_favorite"
                 app:layout_constraintTop_toTopOf="@id/chpFirst"
                 app:layout_constraintBottom_toBottomOf="@id/chpFirst"
                 app:layout_constraintStart_toEndOf="@id/chpThird"/>

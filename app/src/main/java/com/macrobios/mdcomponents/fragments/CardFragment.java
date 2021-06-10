@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -43,6 +44,21 @@ public class CardFragment extends Fragment {
                 .load("https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2020/04/ramen-pollo1920-960x540.jpg")
                 .apply(options)
                 .into(binding.imgCardLarge);
+
+        //CHIP EVENTS
+        binding.chpFirst.setOnClickListener(V -> {
+            Toast.makeText(getActivity(), "First Chip", Toast.LENGTH_SHORT).show();
+        });
+
+        binding.chpSecond.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked){
+                Toast.makeText(getActivity(), "Checked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        binding.chpThird.setOnCloseIconClickListener(v -> {
+            binding.chpThird.setVisibility(View.GONE);
+        });
 
         // Inflate the layout for this fragment
         return view;
