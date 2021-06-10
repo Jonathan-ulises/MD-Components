@@ -30,4 +30,5 @@
     <color name="on_error_color">#FFFFFF</color>
 
     <color name="acent_color">#870000</color>
+    <color name="divider_light">#1E000000</color>
 </resources>
