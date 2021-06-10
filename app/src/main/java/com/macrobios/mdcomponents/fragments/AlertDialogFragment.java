@@ -3,6 +3,7 @@ package com.macrobios.mdcomponents.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,6 +74,13 @@ public class AlertDialogFragment extends Fragment {
                             -> Toast.makeText(getActivity(), R.string.message_action_success, Toast.LENGTH_SHORT).show() )
                     .setNegativeButton(R.string.dialog_cancel, null)
                     .show();
+        });
+
+        //Dialog Full Screen
+        binding.btnDialogFullScreen.setOnClickListener(v -> {
+            FullScreenDialogFragment dialogFragment = new FullScreenDialogFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            dialogFragment.show(transaction, FullScreenDialogFragment.TAG);
         });
 
 
