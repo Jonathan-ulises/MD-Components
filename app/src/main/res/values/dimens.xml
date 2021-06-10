@@ -4,14 +4,15 @@
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="circle_radios">28dp</dimen>
     <dimen name="common_padding_default">16dp</dimen>
     <dimen name="common_padding_nano">2dp</dimen>
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="common_padding_bottom_scroll">64dp</dimen>
     <dimen name="common_padding_micro">4dp</dimen>
-    <dimen name="circle_radios">28dp</dimen>
     <dimen name="common_padding_none">0dp</dimen>
-    <dimen name="card_img_size">80dp</dimen>
     <dimen name="common_padding_middle">24dp</dimen>
+    <dimen name="card_img_size">80dp</dimen>
     <dimen name="card_baseline_top_title">44dp</dimen>
+    <dimen name="card_baseline_rating_bar">24dp</dimen>
 </resources>
