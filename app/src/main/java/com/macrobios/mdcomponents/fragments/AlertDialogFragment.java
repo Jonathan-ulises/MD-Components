@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.macrobios.mdcomponents.R;
@@ -43,6 +45,36 @@ public class AlertDialogFragment extends Fragment {
                     .setPositiveButton(R.string.dialog_ok, null)
                     .show();
         });
+
+        //Dialog Chooser
+        binding.btnDialogChooser.setOnClickListener(v -> {
+            final ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
+                    android.R.layout.select_dialog_item);
+
+            adapter.add("Opcion_1");
+            adapter.add("Opcion_2");
+            adapter.add("Opcion_3");
+
+            new MaterialAlertDialogBuilder(getActivity()).setTitle(R.string.dialog_chooser)
+                    .setAdapter(adapter, (dialog, which) ->
+                            Toast.makeText(getActivity(), adapter.getItem(which), Toast.LENGTH_SHORT).show() )
+                    .show();
+        });
+
+        //Dialog Confirm
+        binding.btnDialogConfirm.setOnClickListener(v -> {
+
+            //new MaterialAlertDialogBuilder(getActivity()).setTitle(R.string.dialog_confirm_title)
+            //new MaterialAlertDialogBuilder(getActivity(), R.style.ThemeOverlay_MaterialComponents_Dialog).setTitle(R.string.dialog_confirm_title)
+            new MaterialAlertDialogBuilder(getActivity(), R.style.MaterialAlertDialog_MaterialComponents_Title_Icon)
+                    .setTitle(R.string.dialog_confirm_title)
+                    .setMessage(R.string.card_message_demo_small)
+                    .setPositiveButton(R.string.dialog_confirm, (dialog, which)
+                            -> Toast.makeText(getActivity(), R.string.message_action_success, Toast.LENGTH_SHORT).show() )
+                    .setNegativeButton(R.string.dialog_cancel, null)
+                    .show();
+        });
+
 
         // Inflate the layout for this fragment
         return view;

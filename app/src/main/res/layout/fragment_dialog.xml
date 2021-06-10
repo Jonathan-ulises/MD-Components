@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.AlertDialogFragment"
@@ -15,6 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_info"
+        app:cornerRadius="@dimen/common_padding_default"
+        app:strokeWidth="@dimen/common_padding_nano"
+        app:strokeColor="@color/primary_color"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
     <com.google.android.material.button.MaterialButton
@@ -22,6 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_chooser"
+        app:cornerRadius="@dimen/common_padding_default"
+        app:strokeWidth="@dimen/common_padding_nano"
+        app:strokeColor="@color/primary_color"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
     <com.google.android.material.button.MaterialButton
@@ -29,6 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_confirm"
+        app:cornerRadius="@dimen/common_padding_default"
+        app:strokeWidth="@dimen/common_padding_nano"
+        app:strokeColor="@color/primary_color"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
     <com.google.android.material.button.MaterialButton
@@ -36,6 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_full_screen"
+        app:cornerRadius="@dimen/common_padding_default"
+        app:strokeWidth="@dimen/common_padding_nano"
+        app:strokeColor="@color/primary_color"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
 </LinearLayout>
