@@ -35,6 +35,9 @@ public class Commons {
             case CheckBoxFragment.TAG:
                 fragment = new CheckBoxFragment();
                 break;
+            case CardFragment.TAG:
+                fragment = new CardFragment();
+                break;
 
             //STATIC
             case BottomNavigationBarFragment.TAG:
