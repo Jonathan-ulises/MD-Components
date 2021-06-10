@@ -49,6 +49,9 @@ public class Commons {
             case FloatingActionButtonFragment.TAG:
                 fragment = new FloatingActionButtonFragment();
                 break;
+            case MenuFragment.TAG:
+                fragment = new MenuFragment();
+                break;
         }
 
         return fragment;

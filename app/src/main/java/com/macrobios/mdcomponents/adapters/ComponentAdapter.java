@@ -17,6 +17,7 @@ import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.ItemComponentBinding;
 import com.macrobios.mdcomponents.utils.Component;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.ComponentViewHolder> {
@@ -24,6 +25,12 @@ public class ComponentAdapter extends RecyclerView.Adapter<ComponentAdapter.Comp
     private List<Component> componentList;
 
     private OnClickListener mListener;
+
+    public void reverse() {
+        Collections.reverse(componentList);
+        notifyDataSetChanged();
+    }
+
     public interface OnClickListener {
         void onItemClick(Component component);
     }
