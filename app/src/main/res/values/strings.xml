@@ -159,4 +159,5 @@
     <string name="picker_dialog">Picker Dialog</string>
     <string name="picker_fullscreen">Picker FullScreen</string>
     <string name="picker_title">Seleccione una Fecha</string>
+    <string name="dialog_negative">Negative Buttom</string>
 </resources>
