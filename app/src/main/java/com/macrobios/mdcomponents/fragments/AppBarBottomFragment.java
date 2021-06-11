@@ -11,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.shape.MaterialShapeDrawable;
 import com.google.android.material.snackbar.Snackbar;
 import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.FragmentAppBarBottomBinding;
 import com.macrobios.mdcomponents.databinding.FragmentAppBarTopBinding;
+import com.macrobios.mdcomponents.utils.BottomAppBarCutCornersTopEdge;
 
 
 public class AppBarBottomFragment extends DialogFragment {
@@ -72,6 +74,18 @@ public class AppBarBottomFragment extends DialogFragment {
             Snackbar.make(binding.containerMain, R.string.message_action_success, Snackbar.LENGTH_LONG)
                     .setAnchorView(binding.fab).show();
         });
+
+        //FAB con topedge en forma diamanante
+        BottomAppBarCutCornersTopEdge topEdge
+                = new BottomAppBarCutCornersTopEdge(
+                        binding.bottomAppBar.getFabCradleMargin(),
+                        binding.bottomAppBar.getFabCradleRoundedCornerRadius(),
+                        binding.bottomAppBar.getCradleVerticalOffset());
+
+        MaterialShapeDrawable shapeDrawable = (MaterialShapeDrawable) binding.bottomAppBar.getBackground();
+        shapeDrawable.setShapeAppearanceModel(
+                shapeDrawable.getShapeAppearanceModel()
+                        .toBuilder().setTopEdge(topEdge).build());
 
         // Inflate the layout for this fragment
         return view;
