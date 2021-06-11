@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.snackbar.Snackbar;
 import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.FragmentAppBarBottomBinding;
 import com.macrobios.mdcomponents.databinding.FragmentAppBarTopBinding;
@@ -45,6 +46,31 @@ public class AppBarBottomFragment extends DialogFragment {
             }
 
             isCentered = !isCentered;
+        });
+
+        binding.bottomAppBar.setOnMenuItemClickListener(item -> {
+            int resMessage;
+            switch (item.getItemId()) {
+                case R.id.action_favorites:
+                    resMessage = R.string.menu_favorites;
+                    break;
+                case R.id.action_profile:
+                    resMessage = R.string.menu_profile;
+                    break;
+                default:
+                    resMessage = R.string.menu_start;
+                    break;
+            }
+
+            Snackbar.make(binding.containerMain, resMessage, Snackbar.LENGTH_LONG)
+                    .setAnchorView(binding.fab).show();
+
+            return true;
+        });
+
+        binding.bottomAppBar.setNavigationOnClickListener(v -> {
+            Snackbar.make(binding.containerMain, R.string.message_action_success, Snackbar.LENGTH_LONG)
+                    .setAnchorView(binding.fab).show();
         });
 
         // Inflate the layout for this fragment
