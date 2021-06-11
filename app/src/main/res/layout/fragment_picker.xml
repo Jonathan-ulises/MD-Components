@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/common_padding_default"
+    android:gravity="center_horizontal"
+    tools:context=".fragments.PickerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--PICKER DIALOG-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/picker_dialog"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/picker_fullscreen"/>
+
+</LinearLayout>

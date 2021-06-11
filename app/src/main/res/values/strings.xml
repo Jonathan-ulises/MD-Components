@@ -156,4 +156,7 @@
     <string name="menu_hint_autocomplete">AutoComplete</string>
     <string name="app_bar_bottom">App Bar Bottom</string>
     <string name="app_bar_Top">App Bar Top</string>
+    <string name="picker_dialog">Picker Dialog</string>
+    <string name="picker_fullscreen">Picker FullScreen</string>
+    <string name="picker_title">Seleccione una Fecha</string>
 </resources>

@@ -58,6 +58,9 @@ public class Commons {
             case AppBarFragment.TAG:
                 fragment = new AppBarFragment();
                 break;
+            case PickerFragment.TAG:
+                fragment = new PickerFragment();
+                break;
         }
 
         return fragment;
