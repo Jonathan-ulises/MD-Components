@@ -2,6 +2,8 @@ package com.macrobios.mdcomponents.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,6 +24,7 @@ public class SheetsBottomFragment extends Fragment {
     private FragmentSheetsBottomBinding binding;
 
     private BottomSheetBehavior mBottomSheetBehavior;
+    private boolean mIsExpanded;
 
     public static Component getInstance(){
         ourInstance = new Component();
@@ -42,6 +45,26 @@ public class SheetsBottomFragment extends Fragment {
 
         mBottomSheetBehavior = BottomSheetBehavior.from(binding.include.bottomSheet);
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+        mBottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                switch (newState){
+                    case BottomSheetBehavior.STATE_EXPANDED:
+                        mIsExpanded = true;
+                        binding.include.btnResize.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_expand_more));
+                        break;
+                    case BottomSheetBehavior.STATE_COLLAPSED:
+                        mIsExpanded = false;
+                        binding.include.btnResize.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.ic_expand_less));
+                        break;
+                }
+            }
+
+            @Override
+            public void onSlide(@NonNull  View bottomSheet, float slideOffset) {
+
+            }
+        });
 
         binding.btnStandar.setOnLongClickListener(v -> {
             mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
@@ -57,6 +80,14 @@ public class SheetsBottomFragment extends Fragment {
             }
         });
 
+
+        binding.include.btnResize.setOnClickListener(v -> {
+            if(mIsExpanded){
+                mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            } else {
+                mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }
+        });
 
         // Inflate the layout for this fragment
         return binding.getRoot();
