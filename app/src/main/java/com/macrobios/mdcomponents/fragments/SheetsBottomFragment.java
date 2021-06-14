@@ -89,6 +89,12 @@ public class SheetsBottomFragment extends Fragment {
             }
         });
 
+
+        binding.btnModal.setOnClickListener(v -> {
+            ModalBottomSheetsFullScreenFragment fragment = new ModalBottomSheetsFullScreenFragment();
+            fragment.show(getFragmentManager().beginTransaction(), ModalBottomSheetsFullScreenFragment.TAG);
+        });
+
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
