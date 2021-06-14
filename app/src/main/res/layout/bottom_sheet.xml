@@ -3,9 +3,16 @@
     android:id="@+id/bottom_sheet"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="@dimen/common_padding_default"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
+
+    app:behavior_hideable="true"
+    app:behavior_skipCollapsed="false"
+
+    app:behavior_peekHeight="@dimen/sheet_bottom_standar_peek_heigh"
+
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout

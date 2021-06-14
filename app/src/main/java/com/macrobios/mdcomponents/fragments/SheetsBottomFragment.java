@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.FragmentNavigationDrawerBinding;
 import com.macrobios.mdcomponents.databinding.FragmentSheetsBottomBinding;
@@ -19,6 +20,8 @@ public class SheetsBottomFragment extends Fragment {
     public static final String TAG = "Sheets Bottom";
     private static Component ourInstance;
     private FragmentSheetsBottomBinding binding;
+
+    private BottomSheetBehavior mBottomSheetBehavior;
 
     public static Component getInstance(){
         ourInstance = new Component();
@@ -36,6 +39,9 @@ public class SheetsBottomFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentSheetsBottomBinding.inflate(inflater, container, false);
+
+        mBottomSheetBehavior = BottomSheetBehavior.from(binding.include.bottomSheet);
+
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
