@@ -22,4 +22,5 @@
     <dimen name="card_paddin_container_variant2">20dp</dimen>
     <dimen name="sheet_bottom_standar_peek_heigh">80dp</dimen>
     <dimen name="item_img_size">56dp</dimen>
+    <dimen name="img_bar_size">40dp</dimen>
 </resources>

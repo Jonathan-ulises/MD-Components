@@ -173,4 +173,5 @@
     <string name="sheets_bottom_standar_place_address">37408, Main Street</string>
     <string name="sheets_bottom_standar_place_schedule">Closed</string>
     <string name="sheets_bottom_standar_place_make_question">Ask something</string>
+    <string name="hint_username">User Name</string>
 </resources>
