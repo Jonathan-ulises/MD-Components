@@ -169,4 +169,8 @@
     <string name="sheets_bottom_standar_place_link">WebSite</string>
     <string name="sheets_bottom_standar_place_call">Call</string>
     <string name="sheets_bottom_standar_place_save">save</string>
+    <string name="sheets_bottom_standar_place_timeline">2 days ago</string>
+    <string name="sheets_bottom_standar_place_address">37408, Main Street</string>
+    <string name="sheets_bottom_standar_place_schedule">Closed</string>
+    <string name="sheets_bottom_standar_place_make_question">Ask something</string>
 </resources>

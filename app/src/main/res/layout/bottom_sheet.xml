@@ -109,10 +109,6 @@
         app:layout_constraintStart_toEndOf="@id/btnLink"
         app:layout_constraintTop_toBottomOf="@id/containerHeader"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-
-
-
     <!--BUTTONS-->
 
 
@@ -129,6 +125,62 @@
     <!--DIVIDER-->
 
 
+    <TextView
+        android:id="@+id/tvChronology"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sheets_bottom_standar_place_timeline"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDividerActions"
+        android:layout_margin="@dimen/common_padding_default"
+        android:drawableStart="@drawable/ic_timeline"
+        android:drawablePadding="@dimen/common_padding_default"
+        app:drawableTint="@color/secundaryVariant_color"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sheets_bottom_standar_place_address"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChronology"
+        android:layout_margin="@dimen/common_padding_default"
+        android:drawableStart="@drawable/ic_location"
+        app:drawableTint="@color/secundaryVariant_color"
+        android:drawablePadding="@dimen/common_padding_default"/>
+
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sheets_bottom_standar_place_schedule"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress"
+        android:layout_margin="@dimen/common_padding_default"
+        android:drawableStart="@drawable/ic_schedule"
+        android:drawablePadding="@dimen/common_padding_default"
+        app:drawableTint="@color/secundaryVariant_color"/>
+
+
+    <!--DIVIDER-->
+    <View
+        android:id="@+id/vDividerDescription"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_light"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSchedule"/>
+    <!--DIVIDER-->
+
+
     <!--TEXT-->
     <TextView
         android:id="@+id/tvDescription"
@@ -139,6 +191,52 @@
         android:layout_margin="@dimen/common_padding_default"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vDividerActions"/>
+        app:layout_constraintTop_toBottomOf="@id/vDividerDescription"/>
     <!--TEXT-->
+
+
+    <!--DIVIDER-->
+    <View
+        android:id="@+id/vDividerQuestions"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_light"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"/>
+    <!--DIVIDER-->
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="@dimen/item_img_size"
+        android:layout_height="@dimen/item_img_size"
+        android:layout_margin="@dimen/common_padding_default"
+        android:src="@drawable/ic_account_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDividerQuestions"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_padding_default"
+        app:layout_constraintStart_toEndOf="@id/imgPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vDividerQuestions"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/sheets_bottom_standar_place_make_question"
+            android:imeOptions="actionDone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
