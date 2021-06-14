@@ -3,6 +3,7 @@ package com.macrobios.mdcomponents.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,11 +44,19 @@ public class NavigationDrawerFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentNavigationDrawerBinding.inflate(inflater, container, false);
 
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
         binding.btnModal.setOnClickListener(v -> {
             ModalNavigationDrawerFragment modalFragment = new ModalNavigationDrawerFragment();
-            modalFragment.show(getFragmentManager().beginTransaction(), ModalNavigationDrawerFragment.TAG);
+            modalFragment.show(transaction, ModalNavigationDrawerFragment.TAG);
         });
 
+        binding.btnBottom.setOnClickListener(v -> {
+            BottomNavigationDrawerFragment bottomFragment = new BottomNavigationDrawerFragment();
+            bottomFragment.show(transaction, BottomNavigationDrawerFragment.TAG);
+        });
+
+        
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
