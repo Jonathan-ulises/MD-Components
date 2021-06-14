@@ -15,6 +15,7 @@
 
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
+    <!--HEADER-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerHeader"
         android:layout_width="0dp"
@@ -24,6 +25,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <ImageButton
+            android:id="@+id/btnResize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_padding_default"
+            android:src="@drawable/ic_expand_less"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/tvName"
@@ -35,7 +47,7 @@
             android:layout_marginTop="@dimen/common_padding_default"
             android:layout_marginEnd="@dimen/common_padding_default"
             android:layout_marginStart="@dimen/common_padding_default"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnResize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -52,7 +64,72 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--HEADER-->
 
+
+    <!--BUTTONS-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:text="@string/sheets_bottom_standar_place_link"
+        android:textColor="@color/secundaryVariant_color"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawableTop="@drawable/ic_link"
+        android:drawableTint="@color/secundaryVariant_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerHeader"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:text="@string/sheets_bottom_standar_place_call"
+        android:textColor="@color/secundaryVariant_color"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawableTop="@drawable/ic_call"
+        android:drawableTint="@color/secundaryVariant_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnLink"
+        app:layout_constraintTop_toBottomOf="@id/containerHeader"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_default"
+        android:text="@string/sheets_bottom_standar_place_save"
+        android:textColor="@color/secundaryVariant_color"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawableTop="@drawable/ic_save"
+        android:drawableTint="@color/secundaryVariant_color"
+        app:layout_constraintStart_toEndOf="@id/btnLink"
+        app:layout_constraintTop_toBottomOf="@id/containerHeader"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    <!--BUTTONS-->
+
+
+    <!--DIVIDER-->
+    <View
+        android:id="@+id/vDividerActions"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_light"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLink"/>
+    <!--DIVIDER-->
+
+
+    <!--TEXT-->
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="0dp"
@@ -62,6 +139,6 @@
         android:layout_margin="@dimen/common_padding_default"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerHeader"/>
-
+        app:layout_constraintTop_toBottomOf="@id/vDividerActions"/>
+    <!--TEXT-->
 </androidx.constraintlayout.widget.ConstraintLayout>
