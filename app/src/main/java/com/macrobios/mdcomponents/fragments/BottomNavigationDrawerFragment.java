@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.shape.MaterialShapeDrawable;
 import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.FragmentBottomNavigationBarBinding;
 import com.macrobios.mdcomponents.databinding.FragmentBottomNavigationDrawerBinding;
+import com.macrobios.mdcomponents.utils.BottomAppBarCutCornersTopEdge;
 
 public class BottomNavigationDrawerFragment extends DialogFragment {
 
@@ -39,6 +41,19 @@ public class BottomNavigationDrawerFragment extends DialogFragment {
             ModalBottomSheetFragmentFragment fragment = new ModalBottomSheetFragmentFragment();
             fragment.show(getFragmentManager().beginTransaction(), ModalBottomSheetFragmentFragment.TAG);
         });
+
+        BottomAppBarCutCornersTopEdge topEdge
+                = new BottomAppBarCutCornersTopEdge(
+                binding.include.bottomAppBar.getFabCradleMargin(),
+                binding.include.bottomAppBar.getFabCradleRoundedCornerRadius(),
+                binding.include.bottomAppBar.getCradleVerticalOffset());
+
+        MaterialShapeDrawable shapeDrawable = (MaterialShapeDrawable) binding.include.bottomAppBar.getBackground();
+        shapeDrawable.setShapeAppearanceModel(
+                shapeDrawable.getShapeAppearanceModel()
+                        .toBuilder().setTopEdge(topEdge).build());
+
+
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
