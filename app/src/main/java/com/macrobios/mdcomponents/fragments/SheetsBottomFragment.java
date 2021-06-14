@@ -41,6 +41,22 @@ public class SheetsBottomFragment extends Fragment {
         binding = FragmentSheetsBottomBinding.inflate(inflater, container, false);
 
         mBottomSheetBehavior = BottomSheetBehavior.from(binding.include.bottomSheet);
+        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+
+        binding.btnStandar.setOnLongClickListener(v -> {
+            mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
+            return true;
+        });
+
+
+        binding.btnStandar.setOnClickListener(v -> {
+            if (mBottomSheetBehavior.getState() == BottomSheetBehavior.STATE_HIDDEN){
+                mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            } else {
+                mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+            }
+        });
+
 
         // Inflate the layout for this fragment
         return binding.getRoot();
