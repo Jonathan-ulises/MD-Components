@@ -64,6 +64,9 @@ public class Commons {
             case NavigationDrawerFragment.TAG:
                 fragment = new NavigationDrawerFragment();
                 break;
+            case SheetsBottomFragment.TAG:
+                fragment = new SheetsBottomFragment();
+                break;
         }
 
         return fragment;

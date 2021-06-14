@@ -162,4 +162,8 @@
     <string name="dialog_negative">Negative Buttom</string>
     <string name="navigation_drawer_modal">Modal Drawer</string>
     <string name="navigation_drawe_bottom">Bottom Drawer</string>
+    <string name="sheets_bottom_standar">Standar Bottom</string>
+    <string name="navigation_bottom_modal">Modal Bottom</string>
+    <string name="sheets_bottom_standar_place_title">Cursos Android ANT</string>
+    <string name="sheets_bottom_standar_place_type">Courses Online</string>
 </resources>
