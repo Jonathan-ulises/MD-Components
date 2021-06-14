@@ -54,12 +54,14 @@ public class ModalBottomSheetsFullScreenFragment extends BottomSheetDialogFragme
 
                 if (BottomSheetBehavior.STATE_EXPANDED == newState){
                     binding.appbar.setVisibility(View.VISIBLE);
-                    binding.llBar.setVisibility(View.GONE);
+                    //binding.llBar.setVisibility(View.GONE);
+                    binding.tvBar.setVisibility(View.GONE);
                     statusBarColor = ContextCompat.getColor(getActivity(), R.color.secundaryVariant_color);
 
                 } else if (BottomSheetBehavior.STATE_COLLAPSED == newState){
                     binding.appbar.setVisibility(View.GONE);
-                    binding.llBar.setVisibility(View.VISIBLE);
+                    //binding.llBar.setVisibility(View.VISIBLE);
+                    binding.tvBar.setVisibility(View.VISIBLE);
 
                 }
 

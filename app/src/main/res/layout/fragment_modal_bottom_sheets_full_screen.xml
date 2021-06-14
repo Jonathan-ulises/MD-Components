@@ -55,12 +55,26 @@
                 </LinearLayout>
             </com.google.android.material.appbar.AppBarLayout>
 
+            <TextView
+                android:id="@+id/tvBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default"
+                app:drawableStartCompat="@drawable/ic_account_circle_40"
+                android:drawablePadding="@dimen/common_padding_default"
+                android:text="@string/hint_username"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+
             <LinearLayout
                 android:id="@+id/llBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:visibility="gone"
                 android:paddingStart="@dimen/common_padding_default"
                 android:paddingEnd="@dimen/common_padding_default">
 
@@ -93,7 +107,6 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/common_padding_default"
                     android:hint="@string/status_outlined_dense_enabled"
                     app:boxStrokeColor="@drawable/states_colors_text_field"
                     app:boxStrokeWidth="@dimen/common_padding_nano"
