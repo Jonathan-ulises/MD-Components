@@ -160,4 +160,6 @@
     <string name="picker_fullscreen">Picker FullScreen</string>
     <string name="picker_title">Seleccione una Fecha</string>
     <string name="dialog_negative">Negative Buttom</string>
+    <string name="navigation_drawer_modal">Modal Drawer</string>
+    <string name="navigation_drawe_bottom">Bottom Drawer</string>
 </resources>

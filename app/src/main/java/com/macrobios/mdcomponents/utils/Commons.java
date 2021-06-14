@@ -61,6 +61,9 @@ public class Commons {
             case PickerFragment.TAG:
                 fragment = new PickerFragment();
                 break;
+            case NavigationDrawerFragment.TAG:
+                fragment = new NavigationDrawerFragment();
+                break;
         }
 
         return fragment;
