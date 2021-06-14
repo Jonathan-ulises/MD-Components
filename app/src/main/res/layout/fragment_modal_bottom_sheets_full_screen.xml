@@ -207,6 +207,10 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+
+                <include layout="@layout/fragment_check_box"/>
+                <!--<include layout="@layout/fragment_button"/>-->
+
                 <View
                     android:id="@+id/vExtraSpace"
                     android:layout_width="match_parent"

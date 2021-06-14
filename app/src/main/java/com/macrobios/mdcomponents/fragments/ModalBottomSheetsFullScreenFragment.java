@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -39,11 +40,41 @@ public class ModalBottomSheetsFullScreenFragment extends BottomSheetDialogFragme
         bottomSheetDialog.setContentView(binding.getRoot());
 
 
-        binding.vExtraSpace.setMinimumHeight((Resources.getSystem().getDisplayMetrics().heightPixels) / 2);
+        binding.vExtraSpace.setMinimumHeight((Resources.getSystem().getDisplayMetrics().heightPixels) / 4);
 
 
         mBottomSheetBehavior = BottomSheetBehavior.from((View) binding.getRoot().getParent());
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
+
+        mBottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull  View bottomSheet, int newState) {
+
+                int statusBarColor = ContextCompat.getColor(getActivity(), R.color.primaryVariant_color);
+
+                if (BottomSheetBehavior.STATE_EXPANDED == newState){
+                    binding.appbar.setVisibility(View.VISIBLE);
+                    binding.llBar.setVisibility(View.GONE);
+                    statusBarColor = ContextCompat.getColor(getActivity(), R.color.secundaryVariant_color);
+
+                } else if (BottomSheetBehavior.STATE_COLLAPSED == newState){
+                    binding.appbar.setVisibility(View.GONE);
+                    binding.llBar.setVisibility(View.VISIBLE);
+
+                }
+
+                getActivity().getWindow().setStatusBarColor(statusBarColor);
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
+
+        binding.btnCancel.setOnClickListener(v -> {
+            mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+        });
 
         return bottomSheetDialog;
     }
