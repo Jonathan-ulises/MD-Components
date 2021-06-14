@@ -1,6 +1,7 @@
 package com.macrobios.mdcomponents.fragments;
 
 import android.app.Dialog;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -33,11 +34,15 @@ public class ModalBottomSheetsFullScreenFragment extends BottomSheetDialogFragme
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         BottomSheetDialog bottomSheetDialog = (BottomSheetDialog) super.onCreateDialog(savedInstanceState);
-        View view = View.inflate(getContext(), R.layout.fragment_modal_bottom_sheets_full_screen, null);
-        binding = FragmentModalBottomSheetsFullScreenBinding.bind(view);
+        //View view = View.inflate(getContext(), R.layout.fragment_modal_bottom_sheets_full_screen, null);
+        binding = FragmentModalBottomSheetsFullScreenBinding.inflate(getLayoutInflater());
+        bottomSheetDialog.setContentView(binding.getRoot());
 
-        bottomSheetDialog.setContentView(view);
-        mBottomSheetBehavior = BottomSheetBehavior.from((View) view.getParent());
+
+        binding.vExtraSpace.setMinimumHeight((Resources.getSystem().getDisplayMetrics().heightPixels) / 2);
+
+
+        mBottomSheetBehavior = BottomSheetBehavior.from((View) binding.getRoot().getParent());
         mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
 
         return bottomSheetDialog;
