@@ -15,6 +15,7 @@ import com.macrobios.mdcomponents.fragments.CardFragment;
 import com.macrobios.mdcomponents.fragments.CheckBoxFragment;
 import com.macrobios.mdcomponents.fragments.FloatingActionButtonFragment;
 import com.macrobios.mdcomponents.fragments.MenuFragment;
+import com.macrobios.mdcomponents.fragments.MotionFragment;
 import com.macrobios.mdcomponents.fragments.NavigationDrawerFragment;
 import com.macrobios.mdcomponents.fragments.PickerFragment;
 import com.macrobios.mdcomponents.fragments.SheetsBottomFragment;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.add(PickerFragment.getInstance());
         adapter.add(NavigationDrawerFragment.getInstance());
         adapter.add(SheetsBottomFragment.getInstance());
+        adapter.add(MotionFragment.getInstance());
         adapter.reverse();
     }
 

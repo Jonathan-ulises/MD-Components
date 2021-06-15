@@ -67,6 +67,9 @@ public class Commons {
             case SheetsBottomFragment.TAG:
                 fragment = new SheetsBottomFragment();
                 break;
+            case MotionFragment.TAG:
+                fragment = new MotionFragment();
+                break;
         }
 
         return fragment;
