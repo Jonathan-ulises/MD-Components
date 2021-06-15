@@ -23,7 +23,7 @@ public class MotionFragment extends Fragment {
     public static final String TAG = "Motion";
     private static Component ourInstance;
     private FragmentMotionBinding binding;
-
+    MaterialContainerTransform transform = new MaterialContainerTransform();
     public static Component getInstance(){
         ourInstance = new Component();
         ourInstance.setName(TAG);
@@ -49,29 +49,42 @@ public class MotionFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentMotionBinding.inflate(inflater, container, false);
 
-        MaterialContainerTransform transform = new MaterialContainerTransform();
-        transform.setScrimColor(Color.TRANSPARENT);
-        transform.setDuration(2500L);
+
 
         //Vista inicial Floating Action Buttom --->  Vista final ConstrainLayout(viewEnd)
         binding.viewStart.setOnClickListener(v -> {
+            transform = new MaterialContainerTransform();
+            transform.setScrimColor(Color.TRANSPARENT);
+            transform.setDuration(2500L);
+
+
             transform.setPathMotion(new MaterialArcMotion());
             transform.setStartView(binding.viewStart);
             transform.setEndView(binding.viewEnd);
             transform.addTarget(binding.viewEnd);
+
             TransitionManager.beginDelayedTransition(binding.containerMain, transform);
             binding.viewStart.setVisibility(View.GONE);
             binding.viewEnd.setVisibility(View.VISIBLE);
+
+            transform = null;
         });
 
         //Vista final ConstrainLayout(viewEnd) --->  Vista inicial Floating Action Buttom
         binding.btnCancel.setOnClickListener(v -> {
+            transform = new MaterialContainerTransform();
+            transform.setScrimColor(Color.TRANSPARENT);
+            transform.setDuration(2500L);
+
             transform.setStartView(binding.viewEnd);
             transform.setEndView(binding.viewStart);
             transform.addTarget(binding.viewStart);
+
             binding.viewEnd.setVisibility(View.GONE);
             binding.viewStart.setVisibility(View.VISIBLE);
             TransitionManager.beginDelayedTransition(binding.containerMain, transform);
+
+            transform = null;
 
         });
 

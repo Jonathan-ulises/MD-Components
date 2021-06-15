@@ -12,9 +12,9 @@
         android:id="@+id/viewEnd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:visibility="gone"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:layout_gravity="bottom">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/containerBar"
