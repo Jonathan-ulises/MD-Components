@@ -50,11 +50,29 @@
                 style="@style/TextAppearance.MaterialComponents.Headline6"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <include layout="@layout/fragment_button"
+        <FrameLayout
+            android:id="@+id/viewOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/containerBar"/>
+            app:layout_constraintTop_toBottomOf="@+id/containerBar">
 
+            <include android:id="@+id/button_layout" layout="@layout/fragment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+
+        
+        <LinearLayout
+            android:id="@+id/viewIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/containerBar"
+            android:padding="@dimen/common_padding_default"
+            android:visibility="gone">
+
+            <include layout="@layout/fragment_check_box"/>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

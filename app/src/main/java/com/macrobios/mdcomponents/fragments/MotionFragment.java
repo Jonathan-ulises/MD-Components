@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.google.android.material.transition.MaterialArcMotion;
 import com.google.android.material.transition.MaterialContainerTransform;
+import com.google.android.material.transition.MaterialSharedAxis;
 import com.macrobios.mdcomponents.R;
 import com.macrobios.mdcomponents.databinding.FragmentMotionBinding;
 import com.macrobios.mdcomponents.utils.Commons;
@@ -50,12 +51,12 @@ public class MotionFragment extends Fragment {
         binding = FragmentMotionBinding.inflate(inflater, container, false);
 
 
-
+        //---------------------CONTENT TRANSFORM PATTERN-------------------------------
         //Vista inicial Floating Action Buttom --->  Vista final ConstrainLayout(viewEnd)
         binding.viewStart.setOnClickListener(v -> {
             transform = new MaterialContainerTransform();
             transform.setScrimColor(Color.TRANSPARENT);
-            transform.setDuration(2500L);
+            transform.setDuration(500L);
 
 
             transform.setPathMotion(new MaterialArcMotion());
@@ -74,7 +75,7 @@ public class MotionFragment extends Fragment {
         binding.btnCancel.setOnClickListener(v -> {
             transform = new MaterialContainerTransform();
             transform.setScrimColor(Color.TRANSPARENT);
-            transform.setDuration(2500L);
+            transform.setDuration(500L);
 
             transform.setStartView(binding.viewEnd);
             transform.setEndView(binding.viewStart);
@@ -87,7 +88,20 @@ public class MotionFragment extends Fragment {
             transform = null;
 
         });
+        //---------------------CONTENT TRANSFORM PATTERN-------------------------------
 
+
+        //-------------------------SHARE AXIS PATTERN----------------------------------
+        binding.buttonLayout.btnCustom.setOnClickListener(v -> {
+            //Pareamtros: X el eje de la transition, forware true si se desplaza hacia adelante
+            MaterialSharedAxis sharedAxis = new MaterialSharedAxis(MaterialSharedAxis.X, true);
+
+            //Parametros: viewEnd es el contenedor
+            TransitionManager.beginDelayedTransition(binding.viewEnd, sharedAxis);
+            binding.viewOut.setVisibility(View.GONE);
+            binding.viewIn.setVisibility(View.VISIBLE);
+        });
+        //-------------------------SHARE AXIS PATTERN----------------------------------
         // Inflate the layout for this fragment
         return binding.getRoot();
     }
