@@ -11,10 +11,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/viewEnd"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/motion_view_end_height"
         android:visibility="gone"
         android:background="@android:color/white"
         android:layout_gravity="bottom">
+
+        <!-- 48 x 8 = 384 ; 384 + 16+16 = 416 ; 416 + 56 = 472-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/containerBar"
