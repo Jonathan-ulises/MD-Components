@@ -175,4 +175,6 @@
     <string name="sheets_bottom_standar_place_make_question">Ask something</string>
     <string name="hint_username">User Name</string>
     <string name="boton_flotante">Boton Flotante</string>
+    <string name="motion_button_back">Back</string>
+    <string name="motion_button_next">Next</string>
 </resources>

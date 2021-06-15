@@ -51,6 +51,9 @@ public class MotionFragment extends Fragment {
         binding = FragmentMotionBinding.inflate(inflater, container, false);
 
 
+        binding.buttonLayout.btnCustom.setText(R.string.motion_button_next);
+
+
         //---------------------CONTENT TRANSFORM PATTERN-------------------------------
         //Vista inicial Floating Action Buttom --->  Vista final ConstrainLayout(viewEnd)
         binding.viewStart.setOnClickListener(v -> {
@@ -100,6 +103,16 @@ public class MotionFragment extends Fragment {
             TransitionManager.beginDelayedTransition(binding.viewEnd, sharedAxis);
             binding.viewOut.setVisibility(View.GONE);
             binding.viewIn.setVisibility(View.VISIBLE);
+        });
+
+        binding.btnBack.setOnClickListener(v -> {
+            //Pareamtros: X el eje de la transition, forware true si se desplaza hacia adelante
+            MaterialSharedAxis sharedAxis = new MaterialSharedAxis(MaterialSharedAxis.X, false);
+
+            //Parametros: viewEnd es el contenedor
+            TransitionManager.beginDelayedTransition(binding.viewEnd, sharedAxis);
+            binding.viewIn.setVisibility(View.GONE);
+            binding.viewOut.setVisibility(View.VISIBLE);
         });
         //-------------------------SHARE AXIS PATTERN----------------------------------
         // Inflate the layout for this fragment

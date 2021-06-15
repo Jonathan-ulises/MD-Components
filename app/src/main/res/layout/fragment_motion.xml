@@ -54,6 +54,7 @@
             android:id="@+id/viewOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="visible"
             app:layout_constraintTop_toBottomOf="@+id/containerBar">
 
             <include android:id="@+id/button_layout" layout="@layout/fragment_button"
@@ -67,11 +68,20 @@
             android:id="@+id/viewIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             app:layout_constraintTop_toBottomOf="@id/containerBar"
             android:padding="@dimen/common_padding_default"
             android:visibility="gone">
 
             <include layout="@layout/fragment_check_box"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/motion_button_back"
+                android:layout_marginTop="@dimen/common_padding_bottom_scroll"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
