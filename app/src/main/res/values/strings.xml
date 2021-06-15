@@ -174,4 +174,5 @@
     <string name="sheets_bottom_standar_place_schedule">Closed</string>
     <string name="sheets_bottom_standar_place_make_question">Ask something</string>
     <string name="hint_username">User Name</string>
+    <string name="boton_flotante">Boton Flotante</string>
 </resources>

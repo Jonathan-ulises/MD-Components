@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/containerMain"
@@ -12,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@android:color/white"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:background="@android:color/white">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/containerBar"
@@ -39,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/action_settings"
-                android:textColor="@color/white"
+                android:textColor="@android:color/white"
                 android:layout_marginStart="@dimen/common_padding_default"
                 android:layout_marginEnd="@dimen/common_padding_default"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +64,7 @@
         android:layout_margin="@dimen/common_padding_default"
         android:layout_gravity="bottom|end"
         android:src="@drawable/ic_filter_list"
-        app:tint="@color/white"
+        app:tint="@android:color/white"
         style="@style/Widget.Design.FloatingActionButton"/>
 
 
