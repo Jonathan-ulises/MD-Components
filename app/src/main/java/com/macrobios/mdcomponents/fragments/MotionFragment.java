@@ -110,7 +110,7 @@ public class MotionFragment extends Fragment {
             //Pareamtros: X el eje de la transition, forware true si se desplaza hacia adelante
             MaterialSharedAxis sharedAxis = new MaterialSharedAxis(MaterialSharedAxis.X, false);
             sharedAxis.setDuration(1500L);
-            
+
             //Parametros: viewEnd es el contenedor
             TransitionManager.beginDelayedTransition(binding.viewEnd, sharedAxis);
             binding.viewIn.setVisibility(View.GONE);
